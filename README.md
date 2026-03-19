@@ -78,7 +78,7 @@ We have cross-verified the **100% consistency** between the historical backtest 
 
 ---
 
-## 📁 프로젝트 아키텍처 (Project Architecture)
+## 📁 Project Architecture
 
 * 📁 **`src/`**
   * 📄 [`indicators.py`](./src/indicators.py) - Custom mathematically formulated Indicators (AWMA, KAMA) without external dependencies.
