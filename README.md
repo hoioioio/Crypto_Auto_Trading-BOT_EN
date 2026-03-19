@@ -45,6 +45,8 @@ Beyond cumulative metrics, the system has passed multidimensional stress tests r
 | **Stress Test 3** <br>*(Early 2026 Flash Crash)* | **MDD 10.99%**<br>*(Period PnL: +18.00%)* | **35.11% Drop** | Generated a **+18% net profit (Long/Short switching)** while the broader market collapsed by 35%. |
 | **Rolling MDD** <br>*(Random 6-Month Holding)* | **Avg 26.4%** | N/A | Definitively proves lack of chronological overfitting. Catastrophic liquidation is prevented regardless of the start month. |
 
+<img width="1800" height="900" alt="image" src="https://github.com/user-attachments/assets/80bf17a7-57a4-4135-9f7d-590343b22ab9" />
+
 ---
 
 ## 🛠️ Tech Stack
