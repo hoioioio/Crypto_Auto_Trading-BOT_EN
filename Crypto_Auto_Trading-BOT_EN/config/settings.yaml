@@ -1,0 +1,19 @@
+# config/settings.yaml
+# Trading Bot Core Parameters (Masked for Public Portfolio)
+# ==========================================
+
+LIVE_MODE: false # true = Real Trades (API), false = Paper Trading Engine
+
+# 1. Position Sizing & Pyramiding Triggers
+PYRAMID_TRIGGER_1: "[Masked_Trigger_Pct_1]"
+PYRAMID_TRIGGER_2: "[Masked_Trigger_Pct_2]"
+TAKER_FEE_RATE: 0.0004
+
+# 2. Reversal Hunter (Early Exit Thresholds)
+EARLY_EXIT_MFI_OVERBOUGHT: "[Masked_Overbought_Val]"
+EARLY_EXIT_MFI_OVERSOLD: "[Masked_Oversold_Val]"
+
+# 3. Grid Search Universe Ranges
+GRID_FAST_MA_RANGE: [1, 2, 3, 5]
+GRID_SLOW_MA_RANGE: [9, 10, 14, 16]
+GRID_MFI_RANGE: [85, 90, 95]
