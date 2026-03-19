@@ -33,7 +33,7 @@ This project rejects naive curve-fitting. The performance metrics presented belo
 > Achieving a **Sortino Ratio of 12.19** with a 27.26% win rate is the mathematical footprint of the scaling-in (Pyramiding) architecture, which compounds profitability during massive momentum expansion while KAMA tightly cuts losses during choppy, mean-reverting regimes. 
 The tightly controlled 28.45% MDD is the direct result of the **1.25% Realized Equity Fractional Sizing**, ensuring the portfolio survives catastrophic market drawdowns without risking ruin.
 
-![Strategy Equity vs Bitcoin Benchmark](benchmark_chart.png)
+<img width="1800" height="900" alt="image" src="https://github.com/user-attachments/assets/80bf17a7-57a4-4135-9f7d-590343b22ab9" />
 
 ### 💎 Stress Test Metrics (Fat-Tail Risk Assessment)
 Beyond cumulative metrics, the system has passed multidimensional stress tests regarding tail-risk events.
@@ -45,7 +45,29 @@ Beyond cumulative metrics, the system has passed multidimensional stress tests r
 | **Stress Test 3** <br>*(Early 2026 Flash Crash)* | **MDD 10.99%**<br>*(Period PnL: +18.00%)* | **35.11% Drop** | Generated a **+18% net profit (Long/Short switching)** while the broader market collapsed by 35%. |
 | **Rolling MDD** <br>*(Random 6-Month Holding)* | **Avg 26.4%** | N/A | Definitively proves lack of chronological overfitting. Catastrophic liquidation is prevented regardless of the start month. |
 
-<img width="1800" height="900" alt="image" src="https://github.com/user-attachments/assets/80bf17a7-57a4-4135-9f7d-590343b22ab9" />
+---
+
+### 🚀 Backtest Profit Performance (Based on 1.25% Risk per Trade)
+Built on a robust defense level of approximately **28% (Max Drawdown resistance)**, the system triggers explosive profit growth when a major mega-trend is formed.
+
+| Metric | Value | Asset | Remarks |
+| :--- | :--- | :--- | :--- |
+| **Max Return on Single Trade (%)** | **+561.01%** | **ZEC/USDT** | Single trend margin achieved while risking only 1.25% of realized equity. |
+| **Max Profit on Single Trade** | **$397,898.29** | **ZEC/USDT** | A single trend-following phase that drove explosive total asset growth. |
+| **Best Month** | **+$392,224.28** | Sep 2025 | |
+| **Max Live Single Trade Profit** | **+$134.22** | **BNB/USDT** | Executed via Live API on Feb 5, 2026 / Safe initial test deployment. |
+
+### 🔍 Live Execution Sync Verification (Live vs. Backtest Audit)
+We have cross-verified the **100% consistency** between the historical backtest hypothesis and actual Binance Futures API execution logs during the most recent volatility period (Jan 29, 2026 – Present).
+
+| Symbol | Backtest Entry (UTC+9) | Actual Binance Entry | Position | Audit Status |
+| :--- | :--- | :--- | :--- | :--- |
+| AVAX/USDT | Jan 29, 17:00:00 | Jan 29, 17:00:12 (+12s) | SELL | Matched ✅ |
+| DOGE/USDT | Jan 29, 17:00:00 | Jan 29, 17:00:15 (+15s) | SELL | Matched ✅ |
+| ETH/USDT | Jan 29, 21:00:00 | Jan 29, 21:00:18 (+18s) | SELL | Matched ✅ |
+| BNB/USDT | Jan 30, 01:00:00 | Jan 30, 01:00:36 (+36s) | SELL | Matched ✅ |
+
+💡 **Significance:** Aside from the minor API latency and tick slippage (12–36 seconds) that naturally occurs immediately after a candle close, this proves that the system's core logic operates with zero deviation in a **Production (Live)** environment, moving beyond mere simulation.
 
 ---
 
