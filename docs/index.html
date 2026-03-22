@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,99 +82,99 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="text-align: center; border: none;">📈 성과 분석 리포트 (Interactive Dashboard)</h1>
+        <h1 style="text-align: center; border: none;">📈 Performance Analysis Report (Interactive Dashboard)</h1>
         
         <div class="controls">
             <div class="control-group">
-                <label>시작일 (Start Date)</label>
+                <label>Start Date</label>
                 <input type="date" id="startDate">
             </div>
             <div class="control-group">
-                <label>종료일 (End Date)</label>
+                <label>End Date</label>
                 <input type="date" id="endDate">
             </div>
-            <button onclick="updateDashboard()">조회하기 (Apply)</button>
+            <button onclick="updateDashboard()">Apply</button>
         </div>
 
-        <h2>📊 전체 기간 요약</h2>
+        <h2>📊 Overall Summary</h2>
         <div class="summary">
             <div class="summary-card">
-                <h3>총 손익 (Total PnL)</h3>
+                <h3>Total PnL</h3>
                 <div class="stat-value" id="valNetProfit">$0</div>
             </div>
             <div class="summary-card" style="background-color: #f1f8ff; border-color: #cce5ff;">
-                <h3>최종 자산 (Final Equity)</h3>
+                <h3>Final Equity</h3>
                 <div class="stat-value" id="valFinalEquity" style="color: #004085;">$0</div>
             </div>
             <div class="summary-card">
-                <h3>총 거래 (Total Trades)</h3>
+                <h3>Total Trades</h3>
                 <div class="stat-value" id="valTrades" style="color: #212529;">0</div>
             </div>
             <div class="summary-card">
-                <h3>승률 (Win Rate)</h3>
+                <h3>Win Rate</h3>
                 <div class="stat-value" id="valWinRate" style="color: #212529;">0%</div>
             </div>
             <div class="summary-card">
-                <h3>승/패 (W/L)</h3>
+                <h3>W/L</h3>
                 <div class="stat-value" id="valWL" style="color: #212529;">0 / 0</div>
             </div>
             <div class="summary-card">
-                <h3>최대 낙폭 (MDD)</h3>
+                <h3>Max Drawdown (MDD)</h3>
                 <div class="stat-value negative" id="valMDD">0%</div>
             </div>
         </div>
 
-        <h2>🎨 시각화 차트</h2>
+        <h2>🎨 Visualization Charts</h2>
         <div class="charts">
             <div class="chart-box">
-                <h3 style="text-align:center; margin-top:0;">월별 손익 (Monthly PnL)</h3>
+                <h3 style="text-align:center; margin-top:0;">Monthly PnL</h3>
                 <canvas id="monthlyChart"></canvas>
             </div>
             <div class="chart-box">
-                <h3 style="text-align:center; margin-top:0;">누적 손익 (Cumulative PnL)</h3>
+                <h3 style="text-align:center; margin-top:0;">Cumulative PnL</h3>
                 <canvas id="cumulativeChart"></canvas>
             </div>
         </div>
         <div class="charts">
             <div class="chart-box-wide">
-                <h3 style="text-align:center; margin-top:0;">종목별 총 손익 (Total PnL by Symbol)</h3>
+                <h3 style="text-align:center; margin-top:0;">Total PnL by Symbol</h3>
                 <canvas id="symbolChart"></canvas>
             </div>
         </div>
 
         <div class="data-section">
             <div class="data-table-wrapper">
-                <h2 style="margin-top:0;">📋 월별 상세 데이터</h2>
+                <h2 style="margin-top:0;">📋 Monthly Detailed Data</h2>
                 <table id="monthlyTable">
                     <thead>
                         <tr>
-                            <th>월 (Month)</th>
-                            <th>총 손익 (Total PnL)</th>
-                            <th>총 거래</th>
-                            <th>승/패</th>
-                            <th>승률 (%)</th>
-                            <th>평균 수익</th>
-                            <th>평균 손실</th>
-                            <th>손익비 (Payoff)</th>
-                            <th>누적 수익</th>
+                            <th>Month</th>
+                            <th>Total PnL</th>
+                            <th>Total Trades</th>
+                            <th>W/L</th>
+                            <th>Win Rate (%)</th>
+                            <th>Avg Profit</th>
+                            <th>Avg Loss</th>
+                            <th>Payoff Ratio</th>
+                            <th>Cumulative Profit</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
             <div class="data-table-wrapper">
-                <h2 style="margin-top:0;">📈 종목별 상세 데이터</h2>
+                <h2 style="margin-top:0;">📈 Symbol Detailed Data</h2>
                 <table id="symbolTable">
                     <thead>
                         <tr>
-                            <th>종목 (Symbol)</th>
-                            <th>총 손익 (Total PnL)</th>
-                            <th>총 거래</th>
-                            <th>승/패</th>
-                            <th>승률 (%)</th>
-                            <th>평균 수익</th>
-                            <th>평균 손실</th>
-                            <th>손익비 (Payoff)</th>
+                            <th>Symbol</th>
+                            <th>Total PnL</th>
+                            <th>Total Trades</th>
+                            <th>W/L</th>
+                            <th>Win Rate (%)</th>
+                            <th>Avg Profit</th>
+                            <th>Avg Loss</th>
+                            <th>Payoff Ratio</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -350,9 +350,9 @@
             }
 
             // Render Charts
-            renderChart('monthlyChart', 'bar', monthlyLabels, '월별 수익금 ($)', monthlyPnlData, monthlyColors);
-            renderChart('cumulativeChart', 'line', cumulativeLabels, '누적 자산 ($)', cumulativeData, '#007bff');
-            renderChart('symbolChart', 'bar', symbolLabels, '종목별 수익금 ($)', symbolPnlData, symbolColors);
+            renderChart('monthlyChart', 'bar', monthlyLabels, 'Monthly PnL ($)', monthlyPnlData, monthlyColors);
+            renderChart('cumulativeChart', 'line', cumulativeLabels, 'Cumulative Equity ($)', cumulativeData, '#007bff');
+            renderChart('symbolChart', 'bar', symbolLabels, 'Total PnL by Symbol ($)', symbolPnlData, symbolColors);
         }
 
         function renderChart(id, type, labels, label, data, colors) {

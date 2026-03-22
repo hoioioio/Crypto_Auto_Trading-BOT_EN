@@ -1,6 +1,6 @@
 # 📈 Crypto_Auto_Trading-BOT (KAMA-Based Systematic Trend Following Engine)
 
-[🚀 View Interactive Backtest Dashboard](https://hoioioio.github.io/Crypto_Auto_Trading-BOT/)
+[🚀 View Interactive Backtest Dashboard](https://hoioioio.github.io/Crypto_Auto_Trading-BOT_EN/)
 (Click the link above to view backtest results for your desired period)
 
 This project is a **data-driven systematic trading engine** targeting the Binance Futures market. It generates a stable, upward-sloping equity curve by employing an **Adaptive Moving Average (KAMA)** that dynamically adjusts signal responsiveness based on market volatility regimes, combined with a **3-Stage Pyramiding (Scaling-in)** execution logic to maximize Risk/Reward asymmetry.
