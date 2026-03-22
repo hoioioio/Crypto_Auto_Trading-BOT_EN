@@ -3,7 +3,7 @@ import json
 
 def build():
     # Read the latest CSV
-    csv_path = 'c:/backtest_trades_2020_now.csv'
+    csv_path = 'backtest_trades_2020_now.csv'
     df = pd.read_csv(csv_path)
 
     # Prepare data for JS

@@ -13,7 +13,7 @@ env/
 # Trading Logs & DBs
 *.json
 *.csv
-*.db
+!backtest_trades_2020_now.csv
 backtest_cache/
 logs/
 
